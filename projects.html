@@ -42,6 +42,89 @@
 	     text-align: center;
 	}
 
+	.center-block {
+    	display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+ 	}
+
+	.circular--square {
+  		border-radius: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p{
+		font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	}
+
+	li{
+		font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	}
+
+    h4{
+        font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    }
+
+	h1{
+		font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+		font-weight:50;
+	}
+
+    .subjects {
+        -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
+        -moz-columns: 100px 2; /* Firefox */
+        columns: 100px 2;
+    }
+
+    #f1_container {
+        position: relative;
+        margin: 10px auto;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+    }
+    #f1_container {
+        perspective: 1000;
+    }
+    #f1_card {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.5s linear;
+    }
+    #f1_container:hover #f1_card {
+        transform: rotateY(180deg);
+        box-shadow: -5px 5px 5px #aaa;
+    }
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
+    .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        background-color: #000;
+    }
+
+    #actf{
+        color:white;
+    }
+
+    #projectsbanner{
+        text-align: center;
+        font-size: 15px;
+        <!--font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;-->
+        <!--font-weight: 300;-->
+    }
+
   </style>
 
   <body>
@@ -50,9 +133,12 @@
 
 	  <div class="container" id="banner">
   		<div class="row">
-	  		<h1> Daniel Shyue Chen </h1>
+	  		<h1>Daniel Shyue Chen</h1>
+			<!--<div class="span4"><img class="center-block" src="vine.jpg" /></div>-->
   		</div>
 	  </div>
+
+
 
 	  <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
 	  	<div class="container">
@@ -69,6 +155,147 @@
 	  </nav>
 
 
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-6">
+				<hr/>
+			</div>
+			<div class="col-sm-3">
+			</div>
+		</div>
+	</div>
+
+    <div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-6">
+				<p id="projectsbanner">Check out some of the projects I've worked on!</p>
+			</div>
+			<div class="col-sm-3">
+			</div>
+		</div>
+	</div>
+
+
+
+
+  <div class="container">
+	<div class="row">
+
+		<div class="col-sm-3">
+		</div>
+
+        <div class="col-sm-3">
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img src="actf.png" width="200" height="200"/>
+                    </div>
+                    <div class="back face center">
+                        <!--<p><a id="actf" href="https://angstromctf.com/">ångstromCTF</a></p>-->
+                        <p>ångstromCTF</p>
+                        <p>A <a id="actf" href="https://angstromctf.com/">capture-the-flag (CTF) competition</a> hosted and written entirely by students at Montgomery Blair High School!</p>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img src="treectf.png" width="200" height="200"/>
+                    </div>
+                    <div class="back face center">
+                        <p>TreeCTF</p>
+                        <p>Upcoming cybersecurity competition, hosted by incoming Stanford students. Stay tuned for more updates on the competition in the fall!</p>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img src="propic.jpg" width="200" height="200"/>
+                    </div>
+                    <div class="back face center">
+                        <p>This Website</p>
+                        <p>This website is maintained completely by myself, and hosted with Digital Ocean. Written with HTML/Bootstrap/CSS, and hosted on a LAMP server.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img src="ipod.png" width="200" height="200"/>
+                    </div>
+                    <div class="back face center">
+                        <p>MoodSing</p>
+                        <p>Music player with facial recognition to detect and manage emotions through music selection. Geared towards combining music and CS to improve mental health.</p>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img src="bitcamp.png" width="200" height="200"/>
+                    </div>
+                    <div class="back face center">
+                        <p>Bitcamp Stress App</p>
+                        <p>Stress management app with gamification, with the theme of (and created for) the Bitcamp 2017 Hackathon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <div id="f1_container">
+                <div id="f1_card" class="shadow">
+                    <div class="front face">
+                        <img src="bubble.png" width="200" height="200"/>
+                    </div>
+                    <div class="back face center">
+                        <p>Bubbles</p>
+                        <p>A <a id="actf" href="https://github.com/shyue/bubbles/">game created by three friends</a>, and inspired by the Windows screensaver. Winner of the 2015-2016 Congressional App Project.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+		<div class="col-sm-3">
+		</div>
+
+	</div>
+  </div>
+
+  <div class="container">
+	  <div class="row">
+		  <div class="col-sm-3">
+		  </div>
+		  <div class="col-sm-6">
+			  <hr/>
+		  </div>
+		  <div class="col-sm-3">
+		  </div>
+	  </div>
+  </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
