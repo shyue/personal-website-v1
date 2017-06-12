@@ -42,6 +42,78 @@
 	     text-align: center;
 	}
 
+	.center-block {
+    	display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+ 	}
+
+	.circular--square {
+  		border-radius: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p{
+		font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	}
+
+	li{
+		font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	}
+
+    h5{
+		font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+        font-size:15px;
+	}
+
+	h1{
+		font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+		font-weight:50;
+	}
+
+    .subjects {
+        -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
+        -moz-columns: 100px 2; /* Firefox */
+        columns: 100px 2;
+    }
+
+    .panel{
+        background-color: rgba(245, 245, 245, 0);
+        background-color: white;
+    }
+
+    #blog{
+        text-align: center;
+        font-size: 15px;
+        <!--font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;-->
+        <!--font-weight: 300;-->
+    }
+
+    #blogtitle{
+        font-size: 15px;
+    }
+
+    button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size:20px;
+    padding:0;
+    font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    }
+
+    #blogdate{
+        font-size:10px;
+    }
+
+    .initial-hide{
+        display: none;
+    }
   </style>
 
   <body>
@@ -50,9 +122,12 @@
 
 	  <div class="container" id="banner">
   		<div class="row">
-	  		<h1> Daniel Shyue Chen </h1>
+	  		<h1>Daniel Shyue Chen</h1>
+			<!--<div class="span4"><img class="center-block" src="vine.jpg" /></div>-->
   		</div>
 	  </div>
+
+
 
 	  <nav class="navbar navbar-default navbar-static-top" role="navigation" id="topnavbar">
 	  	<div class="container">
@@ -69,11 +144,74 @@
 	  </nav>
 
 
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-6">
+				<hr/>
+			</div>
+			<div class="col-sm-3">
+			</div>
+		</div>
+	</div>
+
+
+  <div class="container">
+	<div class="row">
+
+		<div class="col-sm-3">
+		</div>
+
+        <div class="col-sm-6">
+            <p id="blog">Welcome to my blog! Click on a post to expand it and begin reading.</p>
+            <hr/>
+
+
+                        <button onclick="showPost('blog1')">Building a Website</button>
+                        <br>
+                        <p id="blog1" class="initial-hide">
+                            Websites can seem daunting, and that's what I thought too when I set out to build this project.
+                            Even as an experienced CS student, WebDev has always been my weakest point. This summer, I've
+                            set out to change that, and so far it's turning out easier than I expected - setting up this website
+                            only took a couple days, much less than I would've expected. Hopefully the rest of the summer
+                            turns out the same way.
+                        </p>
+                        <p id="blogdate">Written on June 12, 2017</p>
+
+		</div>
+
+		<div class="col-sm-3">
+		</div>
+
+	</div>
+  </div>
+
+  <div class="container">
+	  <div class="row">
+		  <div class="col-sm-3">
+		  </div>
+		  <div class="col-sm-6">
+			  <br>
+			  <hr/>
+		  </div>
+		  <div class="col-sm-3">
+		  </div>
+	  </div>
+  </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    function showPost(val) {
+        $("#" + val).toggle();
+    }
+    </script>
+
+
 
 	<script>
 	$('#topnavbar').affix({
