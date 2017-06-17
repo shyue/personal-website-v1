@@ -71,7 +71,11 @@
     .subjects {
         -webkit-columns: 100px 2; /* Chrome, Safari, Opera */
         -moz-columns: 100px 2; /* Firefox */
+        -o-columns: 100px 2;
+        -ms-columnsL 100px 2;
         columns: 100px 2;
+        list-style-position: inside;
+        margin-left:1em;
     }
 
   </style>
@@ -100,7 +104,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            
+
 	  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  			<ul class="nav navbar-nav navbar-center">
 	  				<li><a href="index">About</a></li>
